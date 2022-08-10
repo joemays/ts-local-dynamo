@@ -1,6 +1,6 @@
 {
   "name": "ts-local-dynamo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Test locally with Amazon DynamoDB Local Docker image",
   "main": "dist/index.js",
   "scripts": {
