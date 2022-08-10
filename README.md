@@ -7,7 +7,7 @@
 ## Installing
 
 ```sh
-npm install local-dynamo
+npm install ts-local-dynamo
 ```
 
 ## Usage
