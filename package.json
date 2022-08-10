@@ -2,7 +2,6 @@
   "name": "ts-local-dynamo",
   "version": "1.0.2",
   "description": "Test locally with Amazon DynamoDB Local Docker image",
-  "main": "dist/index.js",
   "scripts": {
     "clean": "tsc --build --clean",
     "build": "tsc --build",
@@ -30,7 +29,7 @@
   ],
   "repository": "github:joemays/ts-local-dynamo",
   "files": [
-    "dist",
+    "dist/*.*",
     "LICENSE",
     "README.md"
   ]

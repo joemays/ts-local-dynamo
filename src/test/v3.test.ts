@@ -2,7 +2,7 @@ import {
   CreateTableCommandInput,
   ListTablesCommand,
 } from "@aws-sdk/client-dynamodb";
-import { LocalDynamoV3 } from "./localDynamoV3";
+import { LocalDynamoV3 } from "../v3";
 
 const sampleTable: CreateTableCommandInput = {
   AttributeDefinitions: [{ AttributeName: "id", AttributeType: "S" }],

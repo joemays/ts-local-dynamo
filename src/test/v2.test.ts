@@ -1,5 +1,5 @@
 import { DynamoDB } from "aws-sdk";
-import { LocalDynamoV2 } from "./localDynamoV2";
+import { LocalDynamoV2 } from "../v2";
 
 const sampleTable: DynamoDB.CreateTableInput = {
   AttributeDefinitions: [{ AttributeName: "id", AttributeType: "S" }],
