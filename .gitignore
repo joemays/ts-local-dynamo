@@ -1,0 +1,13 @@
+.DS_Store
+.idea
+.vscode
+node_modules
+coverage
+build
+tsconfig.tsbuildinfo
+dist
+*.env*
+config.json
+cdk.out
+cdk.outputs.json
+openapi.json
