@@ -1,6 +1,6 @@
 {
   "name": "ts-local-dynamo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Test locally with Amazon DynamoDB Local Docker image",
   "scripts": {
     "clean": "tsc --build --clean",
