@@ -28,5 +28,10 @@
     "DynamoDB",
     "DynamoDB Local"
   ],
-  "repository": "github:joemays/ts-local-dynamo"
+  "repository": "github:joemays/ts-local-dynamo",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ]
 }
