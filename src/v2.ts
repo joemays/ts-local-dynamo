@@ -2,7 +2,8 @@ import { defaultConfig, LocalDynamo, LocalDynamoConfig } from "./localDynamo";
 import { DynamoDB } from "aws-sdk";
 
 export interface LocalDynamoConfigV2
-  extends LocalDynamoConfig<DynamoDB.CreateTableInput> {}
+  extends LocalDynamoConfig<DynamoDB.CreateTableInput> {
+}
 
 export class LocalDynamoV2 extends LocalDynamo<DynamoDB.CreateTableInput> {
   /**
@@ -14,10 +15,9 @@ export class LocalDynamoV2 extends LocalDynamo<DynamoDB.CreateTableInput> {
   ): Promise<LocalDynamoV2> {
     const result = new LocalDynamoV2({
       ...defaultConfig,
-      ...config,
+      ...config
     });
-    result.start();
-    await result.wait();
+    await result.start();
     await result.createTables();
     return result;
   }

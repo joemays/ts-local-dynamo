@@ -22,8 +22,7 @@ export class LocalDynamoV3 extends LocalDynamo<CreateTableInput> {
       ...defaultConfig,
       ...config,
     });
-    result.start();
-    await result.wait();
+    await result.start();
     await result.createTables();
     return result;
   }

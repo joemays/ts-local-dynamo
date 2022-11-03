@@ -17,8 +17,8 @@ beforeEach(async () => {
   if (dynamo) await dynamo.recreateTables();
 });
 
-afterAll(() => {
-  if (dynamo) dynamo.stop();
+afterAll(async () => {
+  if (dynamo) await dynamo.stop();
 });
 
 test("Table created successfully", async () => {

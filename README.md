@@ -30,25 +30,24 @@ import { LocalDynamoV3 } from "ts-local-dynamo/dist/v3";
 ### Starting
 
 Start a local container using the static `start` method on your class. Provide any tables you'd like to have created in
-the `config` parameter. For example, with AWS SDK V3:
+the `config` parameter.
+
+For example, with AWS SDK V3:
 
 ```typescript
 import { LocalDynamoV3 } from "ts-local-dynamo/dist/v3";
 
 const tables: CreateTableInput[] = []; // add your tables here
-const localDynamo = LocalDynamoV3.start({ tables });
+const localDynamo = await LocalDynamoV3.start({ tables });
 ```
 
 ### Recreating Tables
 
-You might want to clear the database, e.g. in between unit test runs. Use `localDynamo.recreateTables()` to do this.
+To clear the database in between unit test runs, use `await localDynamo.recreateTables()`.
 
 ### Getting a new Dynamo client
 
-Use `localDynamo.newClient()` to get a new client (`DynamoDBClient` in v2, `DynamoDB` in v3) configured to
-work against the local instance.
-
-For details, see `DynamoDBClient.defaultNewClientParams` in `base.ts`.
+Use `localDynamo.newClient()` to get a new AWS SDK Dynamo client configured to work with the container instance.
 
 ### Stopping
 
@@ -76,8 +75,8 @@ beforeEach(async () => {
   if (dynamo) await dynamo.recreateTables();
 });
 
-afterAll(() => {
-  if (dynamo) dynamo.stop();
+afterAll(async () => {
+  if (dynamo) await dynamo.stop();
 });
 
 test("my test", async () => {
@@ -88,7 +87,11 @@ test("my test", async () => {
 
 ### Configuration
 
-You can specify an alternative Docker image name and a custom docker command. See `LocalDynamoConfig` for details.
+You can specify an alternative Docker image name. See `LocalDynamoConfig` for details.
+
+## Thanks
+
+Since v1.1.0 this library is built on top of [testcontainers](https://www.npmjs.com/package/testcontainers).  Thanks!
 
 ## Contributing
 
