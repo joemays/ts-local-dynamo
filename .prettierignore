@@ -1,0 +1,21 @@
+.DS_Store
+.next
+.husky
+.npmrc
+node_modules
+/build
+/package
+/dist
+/lib
+.env
+.env.*
+.gitignore
+!.env.example
+vite.config.js*
+schema.prisma
+
+# Ignore files for PNPM, NPM and YARN
+pnpm-lock.yaml
+pnpm-workspace.yaml
+package-lock.json
+yarn.lock
