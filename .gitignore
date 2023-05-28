@@ -1,13 +1,22 @@
-.DS_Store
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# ide
 .idea
 .vscode
-node_modules
+
+# testing
 coverage
-build
+
+# build
 tsconfig.tsbuildinfo
-dist
-*.env*
-config.json
-cdk.out
-cdk.outputs.json
-openapi.json
+lib/
+dist/ 
+
+# misc
+.DS_Store
+*.pem

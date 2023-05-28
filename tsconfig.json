@@ -2,9 +2,11 @@
   "compilerOptions": {
     "declaration": true,
     "declarationMap": true,
-    "lib": ["ES2020"],
-    "module": "CommonJS",
-    "target": "ES2020",
+    "incremental": true,
+    "lib": ["ES2022"],
+    "module": "ES2022",
+    "moduleResolution": "nodenext",
+    "target": "ES2022",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -12,9 +14,5 @@
     "outDir": "./dist",
     "rootDir": "./src"
   },
-  "exclude": [
-    "dist",
-    "node_modules",
-    "**.test.ts"
-  ]
+  "exclude": ["dist", "**/*.config.ts"]
 }
